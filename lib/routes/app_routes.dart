@@ -10,4 +10,8 @@ class AppRoutes {
         'card':( BuildContext context) => CardScreen(),
         'alert':( BuildContext context) => AlertScreen(),
   };
+  static Route<dynamic> onGenerateRoute(RouteSettings settings){
+     return MaterialPageRoute(
+          builder:(context) => AlertScreen());
+  }
 }

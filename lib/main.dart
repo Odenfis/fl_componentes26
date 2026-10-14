@@ -15,11 +15,7 @@ class MyApp extends StatelessWidget {
       //home: Listview2Screen(),
       initialRoute: AppRoutes.initialRoute,
       routes: AppRoutes.routes,
-      onGenerateRoute: (settings) {
-        return MaterialPageRoute(
-          builder:(context) => AlertScreen(),
-        );
-      },
+      onGenerateRoute: AppRoutes.onGenerateRoute
     );
   }
 }
