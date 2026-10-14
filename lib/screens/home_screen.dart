@@ -1,4 +1,5 @@
 
+import 'package:fl_componentes26/routes/app_routes.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -10,26 +11,22 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Componentes en Flutter 2026',
-          style: TextStyle(
-            color: Colors.white
+          'Componentes en Flutter 2026'
           ),
-          ),
-        backgroundColor: Colors.indigo,
       ),
       body: ListView.separated(
         itemBuilder:(context, index) => ListTile(
-          leading: Icon(Icons.input_rounded),
-          title: Text('Items de Prueba'),
+          leading: Icon(AppRoutes.menuOptions[index].icon),
+          title: Text(AppRoutes.menuOptions[index].name),
           trailing: Icon(Icons.arrow_circle_down),
           onTap: (){
             //final route = MaterialPageRoute(builder:(context) => AlertScreen());
             //Navigator.push(context, route);
-            Navigator.pushNamed(context, 'card');
+            Navigator.pushNamed(context, AppRoutes.menuOptions[index].route);
           },    
         ), 
         separatorBuilder:(context, index) => Divider(), 
-        itemCount: 20)      
+        itemCount: AppRoutes.menuOptions.length)      
     );
   }
 }
