@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class AppTheme{
   static Color primary = Colors.green;
-
+  static Color textoBlanco = Colors.white;
 
   static final ThemeData temaClaro = ThemeData(
       primaryColor: primary,
@@ -13,6 +13,17 @@ class AppTheme{
       iconTheme: IconThemeData(color: primary),
       textButtonTheme: TextButtonThemeData(
         style: TextButton.styleFrom(foregroundColor: primary)
+      ),
+      floatingActionButtonTheme: FloatingActionButtonThemeData(
+        foregroundColor: textoBlanco,
+        backgroundColor: primary,
+      ),
+      elevatedButtonTheme: ElevatedButtonThemeData(
+        style: ElevatedButton.styleFrom(
+          foregroundColor: textoBlanco,
+          backgroundColor: primary,
+          shape: StadiumBorder(),
+        )
       )
   );
 
