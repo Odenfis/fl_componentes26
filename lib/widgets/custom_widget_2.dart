@@ -8,17 +8,25 @@ class CustomCardWidget2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-        child: Column(
-          children: [
-            ListTile(
-              leading: Icon(Icons.photo_album),
-              title: Text('TITULO DE PELICULA'),
-              subtitle: Text('Descripcion de la pelicula', style: TextStyle(color: Colors.red),),
-            )
-          ],
-        ),
+      child: Column(
+        children: [
+          /*Image(
+            image: NetworkImage('https://i.pinimg.com/736x/ea/c2/b7/eac2b7844ad390cd510dc94bb4e7a7ab.jpg')
+            ),*/
+          FadeInImage(
+            placeholder: AssetImage('assets/wait.gif'), 
+            image: AssetImage('assets/goku.jpeg'),
+            width: double.infinity,
+            height: 350,
+            fit: BoxFit.cover,
+            fadeInDuration: Duration(milliseconds: 300),
+            ),
+          Container(
+            padding: EdgeInsets.only(right: 20, top: 10, bottom: 10),
+            alignment: AlignmentDirectional.centerEnd,
+            child: Text('Pelicula: Dragon Ball Super'),
+          )
+        ],
       ),
     );
   }

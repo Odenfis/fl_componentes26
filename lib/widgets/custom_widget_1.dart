@@ -16,6 +16,16 @@ class CustomCardWidget1 extends StatelessWidget {
               leading: Icon(Icons.photo_album),
               title: Text('SOY UN TITULO'),
               subtitle: Text('Descripcion del titulo principal'),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(right: 5),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  TextButton(onPressed: (){}, child: Text('OK')),
+                  TextButton(onPressed: (){}, child: Text('CANCELAR')),
+                ],
+              ),
             )
           ],
         ),
