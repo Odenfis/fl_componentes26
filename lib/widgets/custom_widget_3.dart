@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
 
 class CustomCardWidget3 extends StatelessWidget {
+
+  final String imageURL;
+  final String? descripcion;
+
   const new({
     super.key,
+    required this.imageURL,
+    this.descripcion
   });
 
   @override
@@ -21,16 +27,17 @@ class CustomCardWidget3 extends StatelessWidget {
             ),*/
           FadeInImage(
             placeholder: AssetImage('assets/wait.gif'), 
-            image: AssetImage('assets/goku.jpeg'),
+            image: NetworkImage(imageURL),
             width: double.infinity,
             height: 350,
             fit: BoxFit.cover,
             fadeInDuration: Duration(milliseconds: 300),
             ),
+          if (descripcion != null)
           Container(
             padding: EdgeInsets.only(right: 20, top: 10, bottom: 10),
             alignment: AlignmentDirectional.centerEnd,
-            child: Text('Pelicula: Dragon Ball Super'),
+            child: Text(descripcion ?? 'no disponible'),
           )
         ],
       ),
