@@ -15,7 +15,9 @@ class CardScreen extends StatelessWidget {
         children: [
           CustomCardWidget1(),
           CustomCardWidget2(),
-          
+          CustomCardWidget2(),
+          CustomCardWidget2(),
+          CustomCardWidget2(),
         ],
       )
     );
